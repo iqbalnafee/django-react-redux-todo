@@ -1,0 +1,44 @@
+1. $ mkdir -p ./frontend/src/{components,actions,reducers}
+
+            frontend/
+                src/
+                    actions/
+                    components/
+                    reducers/
+
+2. $ mkdir -p ./frontend/{static,templates}/frontend
+            frontend/
+                static/
+                    frontend/
+                templates/
+                    frontend/
+
+3. npm i -D webpack webpack-cli 
+
+   //Webpack is a popular module bundling system built on top of Node. js. It can handle not only combination and minification of JavaScript and CSS files, but also other assets such as image files (spriting) through the use of plugins.
+
+4. npm i -D babel-loader @babel/core @babel/preset-env @babel/preset-react @babel/plugin-proposal-class-properties
+
+   //Babel is a JavaScript compiler
+    Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments.
+
+5. npm i react react-dom react-router-dom
+
+6. npm i redux react-redux redux-thunk redux-devtools-extension
+
+7. npm i redux-form
+
+8. npm i axios
+
+9. npm i lodash
+
+10. // package.json
+
+{
+  // ...
+  "scripts": {
+    "dev": "webpack --mode development --watch ./frontend/src/index.js --output ./frontend/static/frontend/main.js",
+    "build": "webpack --mode production ./frontend/src/index.js --output ./frontend/static/frontend/main.js"
+  },
+  // ...
+}
