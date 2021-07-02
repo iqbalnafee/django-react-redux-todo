@@ -37,7 +37,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'frontend.apps.FrontendConfig',  # added
+    'todos.apps.TodosConfig',  # added
+    'rest_framework',  # added
 ]
+
+REST_FRAMEWORK = {  # added
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny'
+    ],
+    'DATETIME_FORMAT': "%d/%m/%Y %H:%M:%S",
+}
+# We can specify the output format of a date and time by including DATETIME_FORMAT in a configuration dictionary named REST_FRAMEWORK.
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
