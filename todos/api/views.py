@@ -1,9 +1,9 @@
 from rest_framework import viewsets
 
 from .serializers import TodoSerializer
-from todo.models import Todo
+from todos.models import Todo
 
 
-class TodoViewSet(viewsets.ModelViewset):
+class TodoViewSet(viewsets.ViewSet):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
