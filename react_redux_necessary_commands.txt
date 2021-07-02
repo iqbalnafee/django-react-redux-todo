@@ -42,3 +42,33 @@
   },
   // ...
 }
+
+11. We will create a file named index.js that is called first when we run the React application:
+
+12. Next, we will create a file named App.js that is a parent component:
+
+13. Class based components:
+
+        import React from 'react';
+        import ReactDOM from 'react-dom';
+
+        class Car extends React.Component {
+          render() {
+            return <h2>Hi, I am a Car!</h2>;
+          }
+        }
+
+        ReactDOM.render(<Car />, document.getElementById('root'));
+
+14. Function based components:
+
+        const Car = () => {
+
+          return(
+
+            <h2>Hi, I am a Car!</h2>
+
+          );
+
+        }
+        export default Car;
