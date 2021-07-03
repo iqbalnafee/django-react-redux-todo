@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import {GET_TODOS} from 'types';
+import {GET_TODOS} from './types';
 
 export const getTodos = () => async dispatch => {
 
